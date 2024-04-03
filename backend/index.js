@@ -15,7 +15,7 @@ app.post('/createtodo', async (req, res)=>{
         return; 
     }
 
-    await todo.creat({
+    await todo.create({
         title: creatPayload.title, 
         description: creatPayload.description, 
         completed: false 
@@ -43,7 +43,7 @@ app.put('/completed', async (req, res)=>{
         return; 
     }
 
-    await todo.update({
+    await todo.updateOne({
         _id: req.body.id
     },{ 
         completed: true
